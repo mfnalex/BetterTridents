@@ -1,6 +1,6 @@
-package de.jeff_media.notridentvoid.tasks;
+package de.jeff_media.bettertridents.tasks;
 
-import de.jeff_media.notridentvoid.Main;
+import de.jeff_media.bettertridents.Main;
 import org.bukkit.Location;
 import org.bukkit.entity.Trident;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -37,7 +37,7 @@ public class WatchTrident extends BukkitRunnable {
         }
 
         nextLocation.getBlock().setType(Main.SAFETY_MATERIAL);
-
+        Main.getInstance().debug("New Task: RemoveBarrier");
         new RemoveBarrier(trident, nextLocation.getBlock()).runTaskTimer(Main.getInstance(), 1, 1);
         cancel();
     }

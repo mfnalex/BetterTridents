@@ -1,6 +1,6 @@
-package de.jeff_media.notridentvoid.tasks;
+package de.jeff_media.bettertridents.tasks;
 
-import de.jeff_media.notridentvoid.Main;
+import de.jeff_media.bettertridents.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;

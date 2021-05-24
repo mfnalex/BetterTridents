@@ -8,7 +8,7 @@
 # Permissions #
 ###############
 
-# notridentvoid.use
+# bettertridents.savevoid
 #   Allows to use the "void-saving" feature
 #   Default: true
 
@@ -16,6 +16,22 @@
 # instead of vanishing when falling into the void
 # This is currently the only function of this plugin :P
 void-saving: true
+
+# When enabled, the Impaling enchantment behaves like in Bedrock edition: it deals extra damage to mobs
+# touching water or rain.
+# In 1.17+, this is no longer needed ( https://minecraft.fandom.com/wiki/Java_Edition_Combat_Test_4 )
+bedrock-impaling: true
+
+# When enabled, Drowned drop tridents as often as in Bedrock edition.
+# Default Java Edition drop chance: 8.5% (up to 11.5% with Looting 3) for all Drowned holding a trident
+# Bedrock Edition drop chance: 25% (up to 37% with Looting 3) for all Drowned holding a trident
+bedrock-drop-chance: true
+
+# When enabled, tridents thrown from the offhand will go back to the offhand slot when picked up
+return-to-offhand: true
+
+# When enabled, tridents enchanted with loyalty will be prevented from travelling through portals
+disable-loyalty-portals: true
 
 # Should we check for updates?
 # When enabled, a message is printed in the console if a new version has
@@ -27,6 +43,9 @@ check-for-updates: true
 
 # When check-for-updates is true, AngelChest will check every X hours
 update-check-interval: 4
+
+# Debug mode - you probably don't want this
+debug: false
 
 # NEVER CHANGE THE VALUES BELOW!
 plugin-version: ${project.version}

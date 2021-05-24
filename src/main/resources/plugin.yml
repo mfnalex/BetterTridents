@@ -10,7 +10,19 @@ load: STARTUP
 awareness:
   - !@UTF8
 commands:
+  bettertridents:
+    description: Reloads the config file
+    permission: bettertridents.reload
+    usage: /<command>
 permissions:
-  notridentvoid.use:
+  bettertridents.*:
+    description: Allows to use all BetterTridents features
+    children:
+      - bettertridents.savevoid
+    default: op
+  bettertridents.savevoid:
     description: Prevents tridents enchanted with loyalty to get lost in the void
     default: true
+  bettertridents.reload:
+    description: Allows to reload the config file using /bettertridents
+    default: op

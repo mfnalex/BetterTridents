@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.jeff_media</groupId>
-    <name>NoTridentVoid</name>
-    <artifactId>NoTridentVoid</artifactId>
-    <version>1.1.0</version>
+    <name>BetterTridents</name>
+    <artifactId>BetterTridents</artifactId>
+    <version>2.0.0</version>
 
     <properties>
         <spigot.prefix>${project.name}</spigot.prefix>
-        <spigot.main>${project.groupId}.notridentvoid.Main</spigot.main>
+        <spigot.main>${project.groupId}.bettertridents.Main</spigot.main>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
@@ -45,7 +45,7 @@
                         <!-- Replace "your.package" with your plugin's package name -->
                         <relocation>
                             <pattern>de.jeff_media.updatechecker</pattern>
-                            <shadedPattern>de.jeff_media.notridentvoid.updatechecker</shadedPattern>
+                            <shadedPattern>de.jeff_media.bettertridents.updatechecker</shadedPattern>
                         </relocation>
                         <relocation>
                             <pattern>org.bstats</pattern>
