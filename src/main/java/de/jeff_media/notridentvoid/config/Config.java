@@ -6,9 +6,9 @@ public class Config {
 
     private final Main main = Main.getInstance();
 
-    public static String VOID_SAVING = "void-saving";
-    public static String CHECK_FOR_UPDATES = "check-for-updates";
-    public static String UPDATE_CHECK_INTERVAL = "update-check-interval";
+    public static final String VOID_SAVING = "void-saving";
+    public static final String CHECK_FOR_UPDATES = "check-for-updates";
+    public static final String UPDATE_CHECK_INTERVAL = "update-check-interval";
 
     public Config() {
         addDefault(VOID_SAVING, true);

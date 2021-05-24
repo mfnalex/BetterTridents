@@ -2,7 +2,6 @@ package de.jeff_media.notridentvoid.tasks;
 
 import de.jeff_media.notridentvoid.Main;
 import org.bukkit.Location;
-import org.bukkit.Material;
 import org.bukkit.entity.Trident;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;

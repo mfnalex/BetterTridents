@@ -31,7 +31,7 @@ public class Main extends JavaPlugin {
         LOYALTY_TAG = new NamespacedKey(this, "loyalty");
         reload();
         Bukkit.getPluginManager().registerEvents(new ProjectileListener(), this);
-        Metrics metrics = new Metrics(this, 11460);
+        @SuppressWarnings("unused") Metrics metrics = new Metrics(this, 11460);
     }
 
     public void reload() {

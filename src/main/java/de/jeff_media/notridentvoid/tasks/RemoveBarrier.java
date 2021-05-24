@@ -13,7 +13,6 @@ public class RemoveBarrier extends BukkitRunnable {
     private final Block block;
     private final Trident trident;
     private int ticks = 0;
-    private boolean landed = false;
 
     public RemoveBarrier(Trident trident, Block block) {
         this.block = block;
