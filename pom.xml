@@ -6,7 +6,7 @@
     <groupId>de.jeff_media</groupId>
     <name>NoTridentVoid</name>
     <artifactId>NoTridentVoid</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 
     <properties>
         <spigot.prefix>${project.name}</spigot.prefix>
@@ -38,7 +38,21 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.2.1</version>
+                <configuration>
+                    <relocations>
+                        <!-- Using the maven-shade-plugin to shade and relocate the UpdateChecker -->
+                        <!-- Replace "your.package" with your plugin's package name -->
+                        <relocation>
+                            <pattern>de.jeff_media.updatechecker</pattern>
+                            <shadedPattern>de.jeff_media.notridentvoid.updatechecker</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>org.bstats</pattern>
+                            <shadedPattern>de.jeff_Media.notridentvoid</shadedPattern>
+                        </relocation>
+                    </relocations>
+                </configuration>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -109,7 +123,12 @@
             <artifactId>SpigotUpdateChecker</artifactId>
             <version>1.2.1</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.bstats</groupId>
+            <artifactId>bstats-bukkit</artifactId>
+            <version>2.2.1</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <distributionManagement>

@@ -4,6 +4,7 @@ import de.jeff_media.notridentvoid.config.Config;
 import de.jeff_media.notridentvoid.listeners.ProjectileListener;
 import de.jeff_media.updatechecker.UpdateChecker;
 import de.jeff_media.updatechecker.UserAgentBuilder;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -30,13 +31,15 @@ public class Main extends JavaPlugin {
         LOYALTY_TAG = new NamespacedKey(this, "loyalty");
         reload();
         Bukkit.getPluginManager().registerEvents(new ProjectileListener(), this);
+        Metrics metrics = new Metrics(this, 11460);
     }
 
     public void reload() {
         new Config();
         UpdateChecker.init(this, "https://api.jeff-media.de/notridentvoid/latest-version.txt")
                 .setDonationLink("https://paypal.me/mfnalex")
-                .setDownloadLink("https://www.spigotmc.org/resources/authors/mfnalex.175238/")
+                .setDownloadLink(92656)
+                .setChangelogLink(92656)
                 .setUserAgent(UserAgentBuilder.getDefaultUserAgent());
         if(getConfig().getString(Config.CHECK_FOR_UPDATES).equalsIgnoreCase("true")) {
             UpdateChecker.getInstance().checkEveryXHours(getConfig().getDouble(Config.UPDATE_CHECK_INTERVAL))
