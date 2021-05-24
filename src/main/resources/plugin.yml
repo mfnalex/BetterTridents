@@ -1,0 +1,16 @@
+name: ${project.name}
+main: ${spigot.main}
+version: ${project.version}
+prefix: ${spigot.prefix}
+api-version: "1.13"
+authors: [mfnalex, JEFF Media GbR]
+website: "https://www.mfnalex.de"
+database: false
+load: STARTUP
+awareness:
+  - !@UTF8
+commands:
+permissions:
+  notridentvoid.use:
+    description: Prevents tridents enchanted with loyalty to get lost in the void
+    default: true
