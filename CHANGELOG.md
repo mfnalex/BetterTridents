@@ -1,3 +1,6 @@
+## 2.0.1
+- Fixed tridents getting lost on return when throwing many of them from the offhand while having "return-to-offhand" set to "true"
+
 ## 2.0.0
 - Renamed plugin to "BetterTridents"
 - Added new mechanics and config options:
