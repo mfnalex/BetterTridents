@@ -1,3 +1,6 @@
+## 2.0.2
+- Fixed tridents disappearing when throwing similar tridents (same durability, etc.) from the offhand
+
 ## 2.0.1
 - Fixed tridents getting lost on return when throwing many of them from the offhand while having "return-to-offhand" set to "true"
 
