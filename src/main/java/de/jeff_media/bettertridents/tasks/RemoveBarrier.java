@@ -24,7 +24,7 @@ public class RemoveBarrier extends BukkitRunnable {
         ticks++;
         if(ticks >= MAX_TICKS || (trident.getVelocity().length() > 0 && trident.getLocation().distanceSquared(block.getLocation())>2)) {
             Bukkit.getScheduler().runTaskLater(Main.getInstance(), () ->{
-                if (block.getType() == Main.SAFETY_MATERIAL) {
+                if (block.getType() == Material.BARRIER) {
                     block.setType(Material.AIR);
                 }
                 cancel();

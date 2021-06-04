@@ -11,6 +11,10 @@
 # bettertridents.savevoid
 #   Allows to use the "void-saving" feature
 #   Default: true
+#
+# bettertridents.reload
+#   Allows to reload the config using "/bettertridents"
+#   Default: OPs
 
 # When enabled, tridents enchanted with loyalty will be returned to the player
 # instead of vanishing when falling into the void

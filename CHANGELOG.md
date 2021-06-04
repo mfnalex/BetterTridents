@@ -1,3 +1,7 @@
+## 2.1.0
+- Tridents will not be instantly returned when hitting Y=0
+- Fixed players without "bettertridents.savevoid" permissions being able to use the "void-saving" feature anyway
+
 ## 2.0.2
 - Fixed tridents disappearing when throwing similar tridents (same durability, etc.) from the offhand
 

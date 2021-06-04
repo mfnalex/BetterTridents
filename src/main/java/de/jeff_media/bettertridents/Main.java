@@ -8,7 +8,6 @@ import de.jeff_media.updatechecker.UpdateChecker;
 import de.jeff_media.updatechecker.UserAgentBuilder;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Trident;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -21,7 +20,6 @@ public class Main extends JavaPlugin {
 
     private static Main instance;
     private final ArrayList<UUID> tridents = new ArrayList<>();
-    public static final Material SAFETY_MATERIAL = Material.BARRIER;
     public static NamespacedKey LOYALTY_TAG;
     public static NamespacedKey IMPALING_TAG;
     public static NamespacedKey OFFHAND_TAG;
@@ -42,7 +40,6 @@ public class Main extends JavaPlugin {
         IMPALING_TAG = new NamespacedKey(this, "impaling");
         OFFHAND_TAG = new NamespacedKey(this, "offhand");
         reload();
-        Bukkit.getPluginManager().registerEvents(new VoidListener(), this);
         Bukkit.getPluginManager().registerEvents(new DropListener(), this);
         Bukkit.getPluginManager().registerEvents(new ImpalingListener(), this);
         Bukkit.getPluginManager().registerEvents(new OffhandListener(), this);
@@ -77,10 +74,6 @@ public class Main extends JavaPlugin {
 
     public void setLoyal(Trident trident) {
         tridents.add(trident.getUniqueId());
-    }
-
-    public boolean isLoyal(Trident trident) {
-        return tridents.contains(trident.getUniqueId());
     }
 
     public void removeLoyal(Trident trident) {

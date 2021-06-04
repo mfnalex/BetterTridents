@@ -2,11 +2,11 @@ package de.jeff_media.bettertridents.commands;
 
 import de.jeff_media.bettertridents.Main;
 import de.jeff_media.bettertridents.config.Permissions;
+import de.jeff_media.jefflib.thirdparty.org.jetbrains.annotations.NotNull;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.jetbrains.annotations.NotNull;
 
 public class ReloadCommand implements CommandExecutor {
 
