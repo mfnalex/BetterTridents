@@ -19,8 +19,18 @@ public class WatchTrident extends BukkitRunnable {
 
     static {
         int fieldCount = 0;
+        Class<?> entityThrownTridentClass = null;
         try {
-            final Class<?> entityThrownTridentClass = ReflUtil.getNMSClass("EntityThrownTrident");
+             entityThrownTridentClass = ReflUtil.getNMSClass("EntityThrownTrident");
+        } catch (Throwable ignored) {
+            // 1.17+
+        }
+
+        try {
+            if(entityThrownTridentClass == null) {
+                // 1.17+
+                entityThrownTridentClass = Class.forName("net.minecraft.world.entity.projectile.EntityThrownTrident");
+            }
             getHandleMethod = ReflUtil.getOBCClass("entity.CraftTrident").getMethod("getHandle");
             for (Field field : entityThrownTridentClass.getDeclaredFields()) {
                 if (field.getType() == Boolean.TYPE) {
@@ -32,6 +42,7 @@ public class WatchTrident extends BukkitRunnable {
         } catch (Exception e) {
             damageDealtField = null;
             getHandleMethod = null;
+            e.printStackTrace();
         }
 
         if (fieldCount == 1) {

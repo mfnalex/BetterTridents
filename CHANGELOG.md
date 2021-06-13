@@ -1,3 +1,6 @@
+## 2.1.1
+- Improved void saving in 1.17+
+
 ## 2.1.0
 - Tridents will not be instantly returned when hitting Y=0
 - Fixed players without "bettertridents.savevoid" permissions being able to use the "void-saving" feature anyway
