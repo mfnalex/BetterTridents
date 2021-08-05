@@ -2,7 +2,6 @@ package de.jeff_media.bettertridents.commands;
 
 import de.jeff_media.bettertridents.Main;
 import de.jeff_media.bettertridents.config.Permissions;
-import de.jeff_media.jefflib.thirdparty.org.jetbrains.annotations.NotNull;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -13,7 +12,7 @@ public class ReloadCommand implements CommandExecutor {
     private final Main main = Main.getInstance();
 
     @Override
-    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String alias, @NotNull String[] args) {
+    public boolean onCommand(CommandSender sender, Command command, String alias, String[] args) {
 
         if(!sender.hasPermission(Permissions.RELOAD)) {
             sender.sendMessage(command.getPermissionMessage());

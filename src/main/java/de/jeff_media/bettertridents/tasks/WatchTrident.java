@@ -1,7 +1,7 @@
 package de.jeff_media.bettertridents.tasks;
 
 import de.jeff_media.bettertridents.Main;
-import de.jeff_media.jefflib.ReflUtil;
+import de.jeff_media.jefflib.ReflUtils;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Trident;
@@ -21,7 +21,7 @@ public class WatchTrident extends BukkitRunnable {
         int fieldCount = 0;
         Class<?> entityThrownTridentClass = null;
         try {
-             entityThrownTridentClass = ReflUtil.getNMSClass("EntityThrownTrident");
+             entityThrownTridentClass = ReflUtils.getNMSClass("EntityThrownTrident");
         } catch (Throwable ignored) {
             // 1.17+
         }
@@ -31,7 +31,7 @@ public class WatchTrident extends BukkitRunnable {
                 // 1.17+
                 entityThrownTridentClass = Class.forName("net.minecraft.world.entity.projectile.EntityThrownTrident");
             }
-            getHandleMethod = ReflUtil.getOBCClass("entity.CraftTrident").getMethod("getHandle");
+            getHandleMethod = ReflUtils.getOBCClass("entity.CraftTrident").getMethod("getHandle");
             for (Field field : entityThrownTridentClass.getDeclaredFields()) {
                 if (field.getType() == Boolean.TYPE) {
                     damageDealtField = field;
