@@ -45,7 +45,7 @@ disable-loyalty-portals: true
 # When set to false, don't check for updates
 check-for-updates: true
 
-# When check-for-updates is true, AngelChest will check every X hours
+# When check-for-updates is true, BetterTridents will check every X hours
 update-check-interval: 4
 
 # Debug mode - you probably don't want this
