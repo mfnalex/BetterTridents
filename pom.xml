@@ -6,7 +6,7 @@
     <groupId>de.jeff_media</groupId>
     <name>BetterTridents</name>
     <artifactId>BetterTridents</artifactId>
-    <version>2.2.0</version>
+    <version>2.2.1</version>
 
     <properties>
         <spigot.prefix>${project.name}</spigot.prefix>
@@ -52,20 +52,8 @@
                             <shadedPattern>de.jeff_media.bettertridents.bstats</shadedPattern>
                         </relocation>
                         <relocation>
-                            <pattern>org.apache</pattern>
-                            <shadedPattern>de.jeff_media.bettertridents.lib.org.apache</shadedPattern>
-                        </relocation>
-                        <relocation>
                             <pattern>org.codehaus</pattern>
                             <shadedPattern>de.jeff_media.bettertridents.lib.org.codehaus</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>org.intellij</pattern>
-                            <shadedPattern>de.jeff_media.bettertridents.lib.org.intellij</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>org.jetbrains</pattern>
-                            <shadedPattern>de.jeff_media.bettertridents.lib.org.jetbrains</shadedPattern>
                         </relocation>
                         <relocation>
                             <pattern>de.jeff_media.jefflib</pattern>
@@ -135,13 +123,13 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot</artifactId>
-            <version>1.17-R0.1-SNAPSHOT</version>
+            <version>1.18.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>de.jeff_media</groupId>
             <artifactId>JeffLib</artifactId>
-            <version>4.0.0-SNAPSHOT</version>
+            <version>7.2.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
