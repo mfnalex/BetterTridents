@@ -4,11 +4,9 @@ version: ${project.version}
 prefix: ${spigot.prefix}
 api-version: "1.13"
 authors: [mfnalex, JEFF Media GbR]
-website: "https://www.mfnalex.de"
+website: "https://www.jeff-media.com"
 database: false
 load: STARTUP
-awareness:
-  - !@UTF8
 commands:
   bettertridents:
     description: Reloads the config file
