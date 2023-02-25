@@ -44,6 +44,7 @@ public class Main extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new ImpalingListener(), this);
         Bukkit.getPluginManager().registerEvents(new OffhandListener(), this);
         Bukkit.getPluginManager().registerEvents(new TridentThrowListener(), this);
+        Bukkit.getPluginManager().registerEvents(new PortalListener(), this);
         getCommand("bettertridents").setExecutor(new ReloadCommand());
         @SuppressWarnings("unused") Metrics metrics = new Metrics(this, 11460);
     }

@@ -34,8 +34,8 @@ public class EnchantmentUtils {
         trident.getPersistentDataContainer().set(Main.IMPALING_TAG, PersistentDataType.INTEGER, level);
     }
 
-    public static int getLoyalty(Trident trident) {
-        return trident.getPersistentDataContainer().getOrDefault(Main.LOYALTY_TAG, PersistentDataType.INTEGER, 0);
+    public static boolean getLoyalty(Trident trident) {
+        return trident.getItem().getEnchantments().containsKey(Enchantment.LOYALTY);
     }
 
     public static void registerLoyalty(Trident trident, int level) {
