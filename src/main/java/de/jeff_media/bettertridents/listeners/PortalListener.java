@@ -19,8 +19,8 @@ public class PortalListener implements Listener {
         if(!main.getConfig().getBoolean(Config.DISABLE_LOYALTY_PORTALS)) return;
         if(event.getEntityType() != EntityType.TRIDENT) return;
         Trident trident = (Trident) event.getEntity();
-        if(EnchantmentUtils.getLoyalty(trident)>0) {
-            main.debug("Prevented loyalty trident from travelling through portqal");
+        if(EnchantmentUtils.getLoyalty(trident)) {
+            main.debug("Prevented loyalty trident from travelling through portal");
             event.setCancelled(true);
         }
     }
