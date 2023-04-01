@@ -83,10 +83,10 @@ public class TridentThrowListener implements Listener {
             main.debug("Void Saving disabled");
             return;
         }
-        main.setLoyal(trident);
+        //main.setLoyal(trident);
         main.debug("New task: WatchTrident");
         new WatchTrident(trident).runTaskTimer(main,1,1);
-        Bukkit.getScheduler().runTaskLater(main,() ->main.removeLoyal(trident),1200);
+        //Bukkit.getScheduler().runTaskLater(main,() ->main.removeLoyal(trident),1200);
     }
 
 }

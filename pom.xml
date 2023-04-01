@@ -6,7 +6,7 @@
     <groupId>de.jeff_media</groupId>
     <name>BetterTridents</name>
     <artifactId>BetterTridents</artifactId>
-    <version>2.2.2</version>
+    <version>2.2.3</version>
 
     <properties>
         <spigot.prefix>${project.name}</spigot.prefix>
@@ -29,17 +29,10 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.0</version>
-                <configuration>
-                    <finalName>${project.name}</finalName>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.2.1</version>
                 <configuration>
+                    <minimizeJar>true</minimizeJar>
                     <relocations>
                         <!-- Using the maven-shade-plugin to shade and relocate the UpdateChecker -->
                         <!-- Replace "your.package" with your plugin's package name -->
@@ -56,7 +49,7 @@
                             <shadedPattern>de.jeff_media.bettertridents.lib.org.codehaus</shadedPattern>
                         </relocation>
                         <relocation>
-                            <pattern>de.jeff_media.jefflib</pattern>
+                            <pattern>com.jeff_media.jefflib</pattern>
                             <shadedPattern>de.jeff_media.bettertridents.jefflib</shadedPattern>
                         </relocation>
                     </relocations>
@@ -127,9 +120,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>de.jeff_media</groupId>
+            <groupId>com.jeff_media</groupId>
             <artifactId>JeffLib</artifactId>
-            <version>7.6.0-SNAPSHOT</version>
+            <version>12.3.1</version>
             <scope>compile</scope>
         </dependency>
         <dependency>

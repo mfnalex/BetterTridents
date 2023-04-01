@@ -1,3 +1,8 @@
+## 2.2.3
+- Minor optimizations
+- Fixed loyalty tridents entering portals despite being disabled in the config
+- Fixed tridents with loyalty already returning to player at Y=-60
+
 ## 2.1.1
 - Improved void saving in 1.17+
 

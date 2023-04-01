@@ -1,7 +1,8 @@
 package de.jeff_media.bettertridents.tasks;
 
+import com.jeff_media.jefflib.WorldUtils;
 import de.jeff_media.bettertridents.Main;
-import de.jeff_media.jefflib.ReflUtils;
+import com.jeff_media.jefflib.ReflUtils;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Trident;
@@ -42,7 +43,7 @@ public class WatchTrident extends BukkitRunnable {
         } catch (Exception e) {
             damageDealtField = null;
             getHandleMethod = null;
-            e.printStackTrace();
+            //e.printStackTrace();
         }
 
         if (fieldCount == 1) {
@@ -78,7 +79,7 @@ public class WatchTrident extends BukkitRunnable {
     }
 
     private void rescue() {
-        if (trident.getLocation().getY() >= -60) return;
+        if (trident.getLocation().getY() >= WorldUtils.getWorldMinHeight(trident.getWorld()) - 20) return;
         try {
             damageDealtField.set(getHandleMethod.invoke(trident), true);
         } catch (Exception e) {

@@ -19,7 +19,7 @@ import java.util.UUID;
 public class Main extends JavaPlugin {
 
     private static Main instance;
-    private final ArrayList<UUID> tridents = new ArrayList<>();
+    //private final ArrayList<UUID> tridents = new ArrayList<>();
     public static NamespacedKey LOYALTY_TAG;
     public static NamespacedKey IMPALING_TAG;
     public static NamespacedKey OFFHAND_TAG;
@@ -56,7 +56,7 @@ public class Main extends JavaPlugin {
         reloadConfig();
         new Config();
         ConfigUpdater.updateConfig();
-        UpdateChecker.init(this, "https://api.jeff-media.de/notridentvoid/latest-version.txt")
+        UpdateChecker.init(this, "https://api.jeff-media.com/notridentvoid/latest-version.txt")
                 .setDonationLink("https://paypal.me/mfnalex")
                 .setDownloadLink(92656)
                 .setChangelogLink(92656)
@@ -73,11 +73,11 @@ public class Main extends JavaPlugin {
         }
     }
 
-    public void setLoyal(Trident trident) {
-        tridents.add(trident.getUniqueId());
-    }
-
-    public void removeLoyal(Trident trident) {
-        tridents.remove(trident.getUniqueId());
-    }
+//    public void setLoyal(Trident trident) {
+//        tridents.add(trident.getUniqueId());
+//    }
+//
+//    public void removeLoyal(Trident trident) {
+//        tridents.remove(trident.getUniqueId());
+//    }
 }
