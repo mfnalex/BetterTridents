@@ -1,13 +1,13 @@
 package de.jeff_media.bettertridents.tasks;
 
+import com.github.Anon8281.universalScheduler.UniversalRunnable;
 import de.jeff_media.bettertridents.Main;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.scheduler.BukkitRunnable;
 
-public class MoveToOffhand extends BukkitRunnable {
+public class MoveToOffhand extends UniversalRunnable {
     private final Player player;
     private final ItemStack tridentItem;
 

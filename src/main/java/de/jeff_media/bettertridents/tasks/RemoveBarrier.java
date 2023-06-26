@@ -1,13 +1,12 @@
 package de.jeff_media.bettertridents.tasks;
 
+import com.github.Anon8281.universalScheduler.UniversalRunnable;
 import de.jeff_media.bettertridents.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Trident;
-import org.bukkit.scheduler.BukkitRunnable;
-
-public class RemoveBarrier extends BukkitRunnable {
+public class RemoveBarrier extends UniversalRunnable {
 
     private static final int MAX_TICKS = 40;
     private final Block block;
@@ -23,7 +22,7 @@ public class RemoveBarrier extends BukkitRunnable {
     public void run() {
         ticks++;
         if(ticks >= MAX_TICKS || (trident.getVelocity().length() > 0 && trident.getLocation().distanceSquared(block.getLocation())>2)) {
-            Bukkit.getScheduler().runTaskLater(Main.getInstance(), () ->{
+            Main.getScheduler().runTaskLater(() ->{
                 if (block.getType() == Material.BARRIER) {
                     block.setType(Material.AIR);
                 }
