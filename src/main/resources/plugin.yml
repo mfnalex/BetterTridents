@@ -7,6 +7,7 @@ authors: [mfnalex, JEFF Media GbR]
 website: "https://www.jeff-media.com"
 database: false
 load: STARTUP
+folia-supported: true
 commands:
   bettertridents:
     description: Reloads the config file

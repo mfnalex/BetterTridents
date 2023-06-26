@@ -1,18 +1,18 @@
 package de.jeff_media.bettertridents.tasks;
 
+import com.github.Anon8281.universalScheduler.UniversalRunnable;
 import com.jeff_media.jefflib.WorldUtils;
 import de.jeff_media.bettertridents.Main;
 import com.jeff_media.jefflib.ReflUtils;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Trident;
-import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-public class WatchTrident extends BukkitRunnable {
+public class WatchTrident extends UniversalRunnable {
 
     private static final int MAX_TICKS = 1200;
     private static Field damageDealtField;
