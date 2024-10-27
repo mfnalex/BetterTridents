@@ -32,7 +32,7 @@ public class DropListener implements Listener {
         EntityDamageByEntityEvent damageEvent = (EntityDamageByEntityEvent) event.getEntity().getLastDamageCause();
         if (damageEvent.getDamager().getType() != EntityType.PLAYER) return;
         Player lastDamager = (Player) damageEvent.getDamager();
-        int fortune = EnchantmentUtils.getLevelFromTrident(lastDamager, Enchantment.LOOT_BONUS_MOBS);
+        int fortune = EnchantmentUtils.getLevelFromTrident(lastDamager, Enchantment.LOOTING);
         if (!(event.getEntity() instanceof Drowned)) return;
 
         Drowned drowned = (Drowned) event.getEntity();

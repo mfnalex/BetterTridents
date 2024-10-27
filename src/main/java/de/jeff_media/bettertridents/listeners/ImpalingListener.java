@@ -80,7 +80,7 @@ public class ImpalingListener implements Listener {
                 loc.add((entity.getWidth() * (d / 4.0D)),
                         (entity.getHeight() * (0.5D + e / 4.0D)),
                         (entity.getWidth() * (f / 4.0D)));
-                loc.getWorld().spawnParticle(Particle.CRIT_MAGIC, loc, 0, d, e + 0.2D, f);
+                loc.getWorld().spawnParticle(Particle.CRIT, loc, 0, d, e + 0.2D, f);
             }
         }
     }
