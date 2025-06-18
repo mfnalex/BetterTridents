@@ -64,10 +64,10 @@ public class WatchTrident extends BukkitRunnable {
     private void legacyRescue() {
         Location nextLocation = trident.getLocation().add(trident.getVelocity());
 
-        if (nextLocation.getBlockY() > 1) return;
+        if (nextLocation.getBlockY() > -62) return;
         if (!nextLocation.getBlock().getType().isAir()) return;
 
-        if (nextLocation.getBlockY() < 0) {
+        if (nextLocation.getBlockY() < -63) {
             nextLocation.setY(0);
             trident.teleport(nextLocation.clone().add(0, 1, 0));
             trident.setVelocity(new Vector(0, -1, 0));
