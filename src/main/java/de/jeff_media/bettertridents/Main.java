@@ -4,17 +4,12 @@ import de.jeff_media.bettertridents.commands.ReloadCommand;
 import de.jeff_media.bettertridents.config.Config;
 import de.jeff_media.bettertridents.config.ConfigUpdater;
 import de.jeff_media.bettertridents.listeners.*;
-import de.jeff_media.updatechecker.UpdateChecker;
-import de.jeff_media.updatechecker.UserAgentBuilder;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
-import org.bukkit.entity.Trident;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.UUID;
 
 public class Main extends JavaPlugin {
 
@@ -56,17 +51,7 @@ public class Main extends JavaPlugin {
         reloadConfig();
         new Config();
         ConfigUpdater.updateConfig();
-        UpdateChecker.init(this, "https://api.jeff-media.com/notridentvoid/latest-version.txt")
-                .setDonationLink("https://paypal.me/mfnalex")
-                .setDownloadLink(92656)
-                .setChangelogLink(92656)
-                .setUserAgent(UserAgentBuilder.getDefaultUserAgent());
-        if(getConfig().getString(Config.CHECK_FOR_UPDATES).equalsIgnoreCase("true")) {
-            UpdateChecker.getInstance().checkEveryXHours(getConfig().getDouble(Config.UPDATE_CHECK_INTERVAL))
-                    .checkNow();
-        } else if(getConfig().getString(Config.CHECK_FOR_UPDATES).equalsIgnoreCase("on-startup")) {
-            UpdateChecker.getInstance().checkNow();
-        }
+
         debug = getConfig().getBoolean(Config.DEBUG);
         if(debug) {
             getLogger().warning("Debug mode enabled - this may affect performance.");

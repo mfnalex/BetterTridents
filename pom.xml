@@ -37,20 +37,8 @@
                         <!-- Using the maven-shade-plugin to shade and relocate the UpdateChecker -->
                         <!-- Replace "your.package" with your plugin's package name -->
                         <relocation>
-                            <pattern>de.jeff_media.updatechecker</pattern>
-                            <shadedPattern>de.jeff_media.bettertridents.updatechecker</shadedPattern>
-                        </relocation>
-                        <relocation>
                             <pattern>org.bstats</pattern>
                             <shadedPattern>de.jeff_media.bettertridents.bstats</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>org.codehaus</pattern>
-                            <shadedPattern>de.jeff_media.bettertridents.lib.org.codehaus</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>com.jeff_media.jefflib</pattern>
-                            <shadedPattern>de.jeff_media.bettertridents.jefflib</shadedPattern>
                         </relocation>
                     </relocations>
                 </configuration>
@@ -102,34 +90,22 @@
 
     <repositories>
         <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+            <id>sonatype-oss-snapshots</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
         </repository>
         <repository>
-            <id>jeff-media-gbr</id>
-            <url>https://repo.jeff-media.de/maven2</url>
+            <id>papermc-repo</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
         </repository>
     </repositories>
 
     <dependencies>
         <!-- Spigot and PaperLib -->
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot</artifactId>
-            <version>1.21.3-R0.1-SNAPSHOT</version>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>1.21.8-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.jeff-media.jefflib</groupId>
-            <artifactId>jefflib</artifactId>
-            <version>14.2.3</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>de.jeff_media</groupId>
-            <artifactId>SpigotUpdateChecker</artifactId>
-            <version>1.3.0</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.bstats</groupId>
@@ -137,13 +113,11 @@
             <version>2.2.1</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>26.0.2</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
-
-    <distributionManagement>
-        <repository>
-            <id>jeff-ftp</id>
-            <url>ftps://ftp.jeff-media.de/maven2</url>
-        </repository>
-    </distributionManagement>
-
 </project>
